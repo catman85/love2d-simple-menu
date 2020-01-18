@@ -6,6 +6,9 @@ luac.out
 *.zip
 *.tar.gz
 
+# Love binary (its just a zip)
+*.love
+
 # Object files
 *.o
 *.os
