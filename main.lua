@@ -1,3 +1,11 @@
+-- Hump Gamestate Library --
+Gamestate = require("src/lib/gamestate")
+
+-- Your Gamestates --
+Splash = require("src/Splash")
+Menu = require("src/Menu")
+Game = require("src/Game")
+
 button_height = 64
 
 local function newButton(text ,fn)
@@ -13,6 +21,9 @@ local buttons = {}
 local font = nil
 
 function love.load()
+    Gamestate.registerEvents()
+    Gamestate.switch(Splash)
+
     font = love.graphics.newFont(32)
 
     table.insert(buttons, newButton(
