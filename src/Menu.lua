@@ -35,6 +35,7 @@ function load()
       "text2",
       function()
           print("text2")
+          dofile("src/test.lua")
       end))
 
   table.insert(Menu.buttons, newButton(
